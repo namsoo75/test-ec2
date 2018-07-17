@@ -1,0 +1,88 @@
+/* 본고딕 폰트 적용 및 Initial Setup */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body, input, textarea, select, button, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend {
+    font-family: "Noto Sans KR", sans-serif !important;
+    font-weight:400;
+}
+
+.homeapp-header.one-page-header .navbar-nav > li > a, .homeapp-header.one-page-header .navbar-nav > li > a:focus {
+    color: #222;
+    font-size: 14px;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    padding: 7px 13px;
+}
+
+.g-heading-v10 h2, .g-heading-v10 .h2 {
+    text-transform: none;
+    font-size: 36px;
+    color: #111;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.whats-new {
+	padding: 0 0 90px 0;
+}
+
+/* 스크린샷 border 적용 */
+.whats-new .owl-carousel-v4 .item img {
+    border: 2px solid #ccc;
+}
+
+/* Footer */
+.subfooter .social-item.company {
+	width: 100%;
+	float: left;
+	height: 80px;
+	transition: all 0.3s ease-in-out;
+    color: white;
+    padding-top: 20px;
+}
+
+
+.privacy button, .privacy button:active, .privacy button:visited, .privacy button:focus  {
+    text-decoration: none;
+    color: #4fd2c2;
+   vertical-align:middle;
+    font-weight: 500;
+}
+.privacy button:hover {
+    color: white;
+    text-decoration: none;    
+}
+
+.container-fluid.with-bg-2 {
+	background: #3498db;
+}
+
+.subfooter li.inst {
+	background: #2980b9;
+}
+
+.benefit h3 {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 25px;
+    text-transform: uppercase;
+    line-height: 15px;
+}
+.btn-u-lg.btn-u-upper, a.btn-u-lg.btn-u-upper {
+    font-size: 12px;
+    font-weight: 500;
+}
+#howitworks {
+    display: none;
+}
+
+.our-presentation {
+    text-align: center;
+    padding: 192px 0;
+    background-size: cover;
+    background-position: center center;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3) ), url(../img-temp/presentation.jpg);   
+    background-attachment: fixed;
+}
+

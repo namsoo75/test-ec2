@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<context:component-scan base-package="com.itad.qcheck" />
+	<context:component-scan base-package="com.itad.qcheck.util" />
+
+	<bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
+	<!-- google메일 설정 시 
+	    <property name="host" value="smtp.gmail.com" />
+	    <property name="port" value="587" />
+	    <property name="protocol" value="smtp" />
+	    <property name="username" value="mycallboy@gmail.com" />
+	    <property name="password" value="" />
+	    <property name="javaMailProperties">
+	    <props>
+	   			<prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>                       
+                <prop key="mail.debug">true</prop>
+	    </props>
+	    </property>
+	    -->
+	    <!-- 
+	    <property name="host" value="smtp.naver.com" />
+	    <property name="port" value="587" />
+	    <property name="protocol" value="smtp" />
+	    <property name="username" value="tutormaster@hellochat.com" />
+	    <property name="password" value="hellochat0410" />
+	    <property name="javaMailProperties">
+	    <props>
+	   			<prop key="mail.smtp.ssl.trust">smtp.naver.com</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>                       
+                <prop key="mail.debug">true</prop>
+	    </props>
+	    
+	    </property>
+	     -->
+	    <property name="host" value="smtp.daum.net" />
+	    <property name="port" value="465" />
+	    <property name="protocol" value="smtps" />
+	    <property name="username" value="tech_itad" />
+	    <property name="password" value="**Technology0703" />
+	    <property name="javaMailProperties">
+	    <props>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>                       
+                <prop key="mail.debug">true</prop>
+	    </props>
+	    
+	    </property>
+	</bean>
+
+</beans>
